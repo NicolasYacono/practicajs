@@ -1,20 +1,17 @@
 /* /* //OBJETOS
-//variables del tema casa
-let puertasCasa = 2;
-let ventanasCasa = 6;
-let direccionCasa = "9 de Julio 44";
-
-
-function hablar(quien, donde) {
-    console.log("Mi nombre es" + quien + "y vivo en" + donde);
+/* const persona2 = {
+  nombre: "Coyo",
+  domicilio: "Alte BROWN",
+  edad: {
+    noche: 29,
+    dia:30,
+  }
 }
 
-hablar ("Juana", "9 de Julio");
-
-//variables de la persona
-/* let nombrePersona = "Cacho";
-let edadPersona = 20;
-let piernas = 2; */
+console.log(persona2.edad.noche);
+const nuevaEdad = prompt("Ingrese su edad");
+persona2.edad.noche = nuevaEdad;
+//UTILIZAMOS UN PROMPT PARA REDEFINIR LA VARIABLE POR EL USUARIO */
 
 /* const persona = {nombre: "Homero", edad: 30, piernas: 4}; */
 /* console.log(persona.nombre + o , persona.piernas); */ //Llamamos puntualmente a la propiedad del metodo con el punto (.)
@@ -82,3 +79,23 @@ persona.nombre = "Cacho"; */ //cambio el nombre de la propiedad
   persona1.resetear();
   persona1.hablar(); */
   
+/* 2
+ */
+
+class Armario {
+  constructor(tipoCamisas, cantidad, tela) {
+    this.tipoCamisas = tipoCamisas;
+    this.cantidad = Number(cantidad);
+    this.tela = tela;
+   }
+
+   nuevasCamisas (){
+    this.cantidad = this.cantidad + 4;
+    console.log(`Ahora tengo ${this.cantidad} camisas`)
+   }
+  }
+
+const armarioPieza = new Armario ("Manga larga", "4", "Algodon");
+/* console.log(`El armario tiene ${armarioPieza.cantidad}, camisas ${armarioPieza.tipoCamisas} de ${armarioPieza.tela}`); */
+armarioPieza.nuevasCamisas();
+
