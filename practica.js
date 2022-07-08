@@ -1,8 +1,9 @@
 //PRACTICA
-alert("Bienvenida/o! Le informamos que necesita ser mayor de edad y poseer reprocann para poder inscribirse")
-alert("Ambos seran corroborados con el numero de DNI")
+alert("Bienvenida/o! Le informamos que necesita ser mayor de edad y poseer reprocann para poder inscribirse");
+alert("Ambos seran corroborados con el numero de DNI");
 const abonoMensual = (gramos, precio) => gramos * precio;
-let dni = prompt("Ingrese su DNI (sin puntos)")
+const membresiaGratuita = []
+let dni = prompt("Ingrese su DNI (sin puntos)");
 while(dni.length >= 7){
     if(dni >= 45000000){
         console.log("Lo sentimos es menor de edad")
@@ -21,7 +22,7 @@ while(dni.length >= 7){
                 } else if (gramos1 === 10) {
                     console.log(`Abono mensual por 10gr $${abonoMensual (gramos1, 850)}` )
                 } else {
-                    console.log(`Abono mensual por 15gr $${abonoMensual (15, 800)}`)
+                    console.log(`Abono mensual por 15gr $${abonoMensual (gramos1, 800)}`)
                 }
                 dni=3; 
             } else if (membresia === 1){
@@ -44,8 +45,8 @@ while(dni.length >= 7){
     
 };
 
-let experiencias = [];
-class usuarios {
+
+class Usuarios {
 constructor(nombre, edad, membresia, comentario){
     this.nombre = nombre;
     this.edad = edad;
@@ -53,11 +54,14 @@ constructor(nombre, edad, membresia, comentario){
     this.comentario = comentario;
     }
 }
-experiencias.push(new usuarios("Eli", "30", "Premium", "100% recomendada!!"));
-experiencias.push(new usuarios("Carlos", "45", "Clasica", "La calidad es exelente y el servicio tmb."));
-experiencias.push(new usuarios("Juan", "24", "Gratuita", "La consulta gratuita fue muy buena, voy por una membresia!!"));
 
-experiencias.join("/n");
-console.log(`Te dejamos algunas experiencias de nuestro/as socios/as:`);
-console.log(experiencias);
+const experiencias = [];
 
+experiencias.push(new Usuarios("Eli", "30", "Premium", 'Comentario: "100% recomendada!!"'));
+experiencias.push(new Usuarios("Carlos", "45", "Clasica", 'Comentario: "La calidad es exelente y el servicio tmb."'));
+experiencias.push(new Usuarios("Juan", "24", "Gratuita", 'Comentario: "La consulta gratuita fue muy buena, voy por una membresia Premium!!"'));
+
+console.log("Te dejamos algunas experiencias de nuestro/as socios/as:");
+for (const objeto of experiencias){
+    console.log(`${objeto.nombre} \n ${objeto.edad} \n ${objeto.membresia} \n ${objeto.comentario}`);
+};
