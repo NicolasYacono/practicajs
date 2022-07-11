@@ -1,3 +1,15 @@
+
+/* let i = 0;
+while(i < 5 || i < names.lenght){
+    console.log("loop", i || names.lenght[i]);
+    i++;
+}; */ //lo mismo que for
+
+/* let i = 0
+do{
+    console.log(`val of i is`, i);
+    i++;
+} while(i < 5); */
 /* 
 let membresia = prompt("Ingrese el tipo de membresia que desea (sin el numero) \n1 - Premium \n2 - Clasica\n3 - Gratuita \n4 - Ninguna");
 if(membresia != "Ninguna"){
